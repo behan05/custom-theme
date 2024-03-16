@@ -1,0 +1,237 @@
+@import "./mixin";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+body {
+    background-color: #2a2833ff;
+    width: 100vw;
+    height: 100vh;
+
+    @at-root {
+
+        // Start Navbar.
+        .container__navbar {
+            height: 14vh;
+            width: 100%;
+            position: relative;
+            @include flex-center();
+
+            a {
+                text-decoration: none;
+                color: rgb(107, 103, 129);
+                font-size: 1.1rem;
+                font-weight: 600;
+                text-shadow: 1px 1px 1px #000;
+
+                .container__image {
+                    border-radius: 50%;
+                    height: 10vh;
+                    box-shadow: 0 0 0.9rem 2px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        filter: saturate(130%), brightness(120%) contrast(130%);
+                    }
+                }
+            }
+        }
+
+        // End Navbar.
+        // start hero section.
+        .main {
+            width: 100%;
+            height: calc(100vh - 14vh);
+
+            .main__icons {
+                width: 80%;
+                height: 40%;
+                margin: 0 auto;
+                border-radius: 8px;
+                box-shadow: 0 0 0.5rem;
+                @include flex-center();
+
+                .main__left {
+                    @include flex-center() {
+                        height: 100%;
+                        width: 50%;
+                    }
+
+                    img {
+                        width: auto;
+                        height: 100%;
+
+                        @include rotate() {
+                            animation: body-rotate 2s ease-in-out 0s infinite;
+                            filter: saturate(130%), brightness(120%) contrast(130%);
+                            object-fit: cover;
+
+                        }
+                    }
+                }
+
+                .main__right {
+                    @include flex-center() {
+                        height: 100%;
+                        width: 50%;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        border: 1px solid #ddd;
+                        border-radius: 50%;
+                        box-shadow: 0 0 0.5rem #000;
+
+                        i {
+                            background-color: #ddd;
+                            padding: 0.5em;
+                            border-radius: 50%;
+                            font-size: 1.3rem;
+                            filter: saturate(130%), brightness(120%) contrast(130%);
+                        }
+
+                        .fa-github,
+                        .fa-codepen {
+                            color: #000;
+                        }
+
+                        .fa-youtube {
+                            color: red;
+                        }
+
+                        .fa-linkedin {
+                            color: #216e91ff;
+                        }
+
+                    }
+                }
+            }
+
+            // start search.
+            .main__search {
+                width: 80%;
+                height: 15%;
+                margin: 1rem auto;
+                @include flex-center();
+
+                .main__left {
+                    height: 100%;
+                    width: 60%;
+                    padding: 2.5rem;
+                    display: flex;
+
+                    // img {
+                    //     width: 4rem;
+                    //     height: 2rem;
+                    //     object-fit: cover;
+                    // }
+
+                    input {
+                        height: 2.4rem;
+                        width: 30vw;
+                        background-color: #3d3c4aff;
+                        outline: none;
+                        padding-left: 0.5rem;
+                        border-radius: 4px;
+                        border: none;
+                        color: #ddd;
+                        font-size: 1.2rem;
+                        box-shadow: 0 0 0.1rem;
+
+                        &::placeholder {
+                            color: #ddd;
+                        }
+                    }
+
+                    button {
+                        height: 2.4rem;
+                        background-color: #3d3c4aff;
+                        padding: 0.5rem;
+                        border-radius: 4px;
+                        border: none;
+                        margin-left: auto;
+                        box-shadow: 0 0 0.1rem;
+
+                        i {
+                            color: #ddd;
+                            font-size: 1.2rem;
+                            text-shadow: 0 0 0.1rem;
+                        }
+                    }
+
+                }
+
+                .main__right {
+                    height: 100%;
+                    width: 40%;
+                    @include flex-center();
+
+                    h2 {
+                        font-family: "Gwendolyn", cursive;
+                        font-weight: 700;
+                        font-style: normal;
+                        color: #fff;
+                        font-size: 2.2rem;
+                        text-shadow: 0 0 2rem lightseagreen;
+                        filter: drop-shadow(1px 1px 1rem lightseagreen);
+
+                        span {
+                            color: red;
+                            font-size: 2.5rem;
+                            font-weight: 900;
+                        }
+                    }
+                }
+            }
+
+            // end search.
+
+            .main__links {
+                width: 90%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                gap: 4px;
+
+                a {
+                    text-decoration: none;
+
+                    div {
+                        padding: 1.5rem;
+                        background-color: #3d3c4aff;
+                        color: #ddd;
+                        box-shadow: 0 0 0.5rem #000;
+
+                        i {
+                            font-size: 1.2rem;
+                            padding: 0px 1rem;
+                        }
+
+                        .fa-github,
+                        .fa-codepen {
+                            color: #000;
+                        }
+
+                        .fa-youtube {
+                            color: red;
+                        }
+
+                        .fa-linkedin,
+                        .fa-twitter {
+                            color: #216e91ff;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

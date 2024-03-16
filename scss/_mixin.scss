@@ -1,0 +1,21 @@
+@mixin flex-center() {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @content;
+}
+
+@mixin rotate() {
+    @keyframes body-rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(160deg);
+        }
+    }
+
+    @content;
+}
