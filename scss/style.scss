@@ -21,6 +21,7 @@ body {
             position: relative;
             @include flex-center();
 
+
             a {
                 text-decoration: none;
                 color: rgb(107, 103, 129);
@@ -254,6 +255,7 @@ body {
                         &:hover {
                             box-shadow: 0 0 0.5rem #ddd;
                         }
+
                         &::selection {
                             color: red;
                         }
@@ -286,4 +288,153 @@ body {
 
         // start hero section.
     }
+}
+
+
+// navbar responsiv.
+@include responsive(1px, 450px) {
+
+    // start navbar
+    .container__navbar {
+        height: 10vh;
+
+        a {
+            letter-spacing: 0px;
+
+            .container__image {
+                height: 4vh;
+            }
+        }
+    }
+
+    // end navbar.
+
+    // start hero section.
+    .main {
+        width: 100%;
+        height: calc(100vh - 14vh);
+
+        // start hero section box1.
+        .main__icons {
+            width: 90%;
+            height: 30%;
+
+            .main__left {
+                @include flex-center() {
+                    height: 100%;
+                    width: 50%;
+                }
+
+                img {
+                    height: 70%;
+                }
+            }
+
+            .main__right {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                width: auto;
+                column-gap: 1rem;
+
+                a {
+                    border: none;
+                    box-shadow: none;
+
+                    i {
+                        box-shadow: 0 0 0.5rem #000;
+                    }
+
+                    &:hover {
+                        box-shadow: 0 0 0.5rem #ddd;
+                    }
+                }
+            }
+        }
+
+        // End hero section box1.
+        // start hero section box2.
+        .main__search {
+            width: 100%;
+
+            @include flex-center() {
+                flex-wrap: nowrap;
+            }
+
+            .main__left {
+                height: 70%;
+                width: 65%;
+                padding: 1.2rem;
+                // background-color: red;
+
+                form {
+                    @include flex-center() {
+                        flex-wrap: nowrap;
+                    }
+                }
+
+                input {
+                    height: 2.9rem;
+                    width: 50vw;
+                }
+
+                .btn-microphone {
+                    display: none;
+                }
+
+                button {
+                    height: 2.9rem;
+                    margin-left: 4px;
+                }
+            }
+
+            .main__right {
+                height: 100%;
+                width: 40%;
+                @include flex-center();
+
+                h2 {
+                    font-size: 1.6rem;
+
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        // End hero section box2.
+        // Start hero section box3.
+        .main__links {
+            width: 95%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 2px;
+
+            a {
+                text-decoration: none;
+
+                div {
+                    padding: 1.5rem;
+
+                    i {
+                        font-size: 2rem;
+                        padding: 0;
+                        margin-left: -10px;
+
+                    }
+
+                    span {
+                        margin-left: 15px;
+                    }
+
+                }
+            }
+        }
+
+        // End hero section box3.
+    }
+    // start hero section.
 }
