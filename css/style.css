@@ -285,7 +285,7 @@ body {
     box-shadow: 0 0 0.5rem #000;
   }
   .main .main__icons .main__right a:hover {
-    box-shadow: 0 0 0.5rem #ddd;
+    box-shadow: none;
   }
   .main .main__search {
     width: 100%;
