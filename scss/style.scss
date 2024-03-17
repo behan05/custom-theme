@@ -27,11 +27,29 @@ body {
                 font-size: 1.1rem;
                 font-weight: 600;
                 text-shadow: 1px 1px 1px #000;
+                letter-spacing: 0.1rem;
+
+                &:hover {
+                    color: #ddd;
+                }
+
+                &:active,
+                &::selection {
+                    color: red;
+                }
 
                 .container__image {
                     border-radius: 50%;
-                    height: 10vh;
+                    height: 5vh;
                     box-shadow: 0 0 0.9rem 2px;
+
+                    &:hover {
+                        box-shadow: 0 0 0.5rem #ddd;
+                    }
+
+                    &:active {
+                        box-shadow: 0 0 1rem #ff0000;
+                    }
 
                     img {
                         width: 100%;
@@ -50,6 +68,7 @@ body {
             width: 100%;
             height: calc(100vh - 14vh);
 
+            // start hero section box1.
             .main__icons {
                 width: 80%;
                 height: 40%;
@@ -97,6 +116,10 @@ body {
                             filter: saturate(130%), brightness(120%) contrast(130%);
                         }
 
+                        &:hover {
+                            box-shadow: 0 0 0.5rem #ddd;
+                        }
+
                         .fa-github,
                         .fa-codepen {
                             color: #000;
@@ -114,7 +137,8 @@ body {
                 }
             }
 
-            // start search.
+            // End hero section box1.
+            // start hero section box2.
             .main__search {
                 width: 80%;
                 height: 15%;
@@ -148,6 +172,11 @@ body {
                         &::placeholder {
                             color: #ddd;
                         }
+
+                        &:hover {
+                            box-shadow: 0 0 0.5rem #ddd;
+                        }
+
                     }
 
                     button {
@@ -163,6 +192,10 @@ body {
                             color: #ddd;
                             font-size: 1.2rem;
                             text-shadow: 0 0 0.1rem;
+                        }
+
+                        &:hover {
+                            box-shadow: 0 0 0.5rem #ddd;
                         }
                     }
 
@@ -182,17 +215,25 @@ body {
                         text-shadow: 0 0 2rem lightseagreen;
                         filter: drop-shadow(1px 1px 1rem lightseagreen);
 
+                        &::selection {
+                            color: red;
+                        }
+
                         span {
                             color: red;
                             font-size: 2.5rem;
                             font-weight: 900;
+
+                            &::selection {
+                                color: red;
+                            }
                         }
                     }
                 }
             }
 
-            // end search.
-
+            // End hero section box2.
+            // Start hero section box3.
             .main__links {
                 width: 90%;
                 margin: 0 auto;
@@ -209,6 +250,13 @@ body {
                         background-color: #3d3c4aff;
                         color: #ddd;
                         box-shadow: 0 0 0.5rem #000;
+
+                        &:hover {
+                            box-shadow: 0 0 0.5rem #ddd;
+                        }
+                        &::selection {
+                            color: red;
+                        }
 
                         i {
                             font-size: 1.2rem;
@@ -232,6 +280,10 @@ body {
                     }
                 }
             }
+
+            // End hero section box3.
         }
+
+        // start hero section.
     }
 }
