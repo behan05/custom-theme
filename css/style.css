@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #2a2833;
+  background-color: rgb(17, 15, 27);
   width: 100vw;
   height: 100vh;
 }
@@ -21,7 +21,7 @@ body {
 }
 .container__navbar a {
   text-decoration: none;
-  color: rgb(107, 103, 129);
+  color: rgb(183, 174, 228);
   font-size: 1.1rem;
   font-weight: 600;
   text-shadow: 1px 1px 1px #000;
@@ -62,6 +62,8 @@ body {
   margin: 0 auto;
   border-radius: 8px;
   box-shadow: 0 0 0.5rem;
+  background-color: rgb(17, 15, 27);
+  filter: drop-shadow(1px 1px 0.1rem #ddd);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
