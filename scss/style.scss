@@ -8,7 +8,8 @@
 }
 
 body {
-    background-color: rgb(17, 15, 27);
+    // background-color: rgb(0, 0, 0);
+    background-image: linear-gradient(to bottom, #000 80%, rgb(58, 85, 84));
     width: 100vw;
     height: 100vh;
 
@@ -24,7 +25,7 @@ body {
 
             a {
                 text-decoration: none;
-                color: rgb(183, 174, 228);
+                color: #ffffff;
                 font-size: 1.1rem;
                 font-weight: 600;
                 text-shadow: 1px 1px 1px #000;
@@ -32,6 +33,7 @@ body {
 
                 &:hover {
                     color: #ddd;
+                    font-variant: small-caps;
                 }
 
                 &:active,
@@ -42,7 +44,7 @@ body {
                 .container__image {
                     border-radius: 50%;
                     height: 5vh;
-                    box-shadow: 0 0 0.9rem 2px;
+                    filter: drop-shadow(0 0 0.2rem #fff);
 
                     &:hover {
                         box-shadow: 0 0 0.5rem #ddd;
@@ -75,9 +77,9 @@ body {
                 height: 40%;
                 margin: 0 auto;
                 border-radius: 8px;
-                box-shadow: 0 0 0.5rem;
-                background-color: rgb(17, 15, 27);
-                filter: drop-shadow(1px 1px 0.1rem #ddd);
+                background-image: linear-gradient(to bottom, #000 80%, rgb(58, 85, 84));
+
+                filter: drop-shadow(0px 0px 0.3rem #ddd);
                 @include flex-center();
 
                 .main__left {
@@ -107,9 +109,8 @@ body {
 
                     a {
                         text-decoration: none;
-                        border: 1px solid #ddd;
                         border-radius: 50%;
-                        box-shadow: 0 0 0.5rem #000;
+                        background-image: linear-gradient(to bottom, #000 80%, rgb(58, 85, 84));
 
                         i {
                             background-color: #ddd;
@@ -163,7 +164,7 @@ body {
                     input {
                         height: 2.4rem;
                         width: 30vw;
-                        background-color: #3d3c4aff;
+                        background-image: linear-gradient(to left, #000 40%, rgb(58, 85, 84));
                         outline: none;
                         padding-left: 0.5rem;
                         border-radius: 4px;
@@ -184,7 +185,7 @@ body {
 
                     button {
                         height: 2.4rem;
-                        background-color: #3d3c4aff;
+                        background-image: linear-gradient(to left, #000 70%, rgb(58, 85, 84));
                         padding: 0.5rem;
                         border-radius: 4px;
                         border: none;
@@ -217,19 +218,9 @@ body {
                         font-size: 2.2rem;
                         text-shadow: 0 0 2rem lightseagreen;
                         filter: drop-shadow(1px 1px 1rem lightseagreen);
-
-                        &::selection {
-                            color: red;
-                        }
-
-                        span {
-                            color: red;
-                            font-size: 2.5rem;
-                            font-weight: 900;
-
-                            &::selection {
-                                color: red;
-                            }
+                        user-select: none;
+                        @include zoomin() {
+                            animation: heart 2s linear 0s infinite ;
                         }
                     }
                 }
@@ -250,9 +241,13 @@ body {
 
                     div {
                         padding: 1.5rem;
-                        background-color: #3d3c4aff;
+                        background-image: linear-gradient(to left, #181717 70%, rgb(58, 85, 84));
                         color: #ddd;
                         box-shadow: 0 0 0.5rem #000;
+                        &:hover {
+                            font-variant: small-caps;
+                            letter-spacing: 0.3rem;
+                        }
 
                         &:hover {
                             box-shadow: 0 0 0.5rem #ddd;
@@ -417,6 +412,7 @@ body {
 
             a {
                 text-decoration: none;
+                background-image: linear-gradient(to left, #181717 70%, rgb(58, 85, 84));
 
                 div {
                     padding: 1.5rem;

@@ -24,9 +24,27 @@
 
 @mixin responsive($breakpoint-min, $breakpoint-max) {
 
-    @media screen and (min-width: $breakpoint-min) and (max-width: $breakpoint-max){
+    @media screen and (min-width: $breakpoint-min) and (max-width: $breakpoint-max) {
 
         @content;
 
     }
+}
+
+@mixin zoomin() {
+    @keyframes heart {
+        from {
+            color: lightseagreenred;
+            font-size: 2.5rem;
+            font-weight: 900;
+        }
+
+        to {
+            color: red;
+            font-size: 2.4rem;
+            font-weight: 900;
+        }
+    }
+
+    @content;
 }

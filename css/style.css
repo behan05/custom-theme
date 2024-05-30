@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: rgb(17, 15, 27);
+  background-image: linear-gradient(to bottom, #000 80%, rgb(58, 85, 84));
   width: 100vw;
   height: 100vh;
 }
@@ -21,7 +21,7 @@ body {
 }
 .container__navbar a {
   text-decoration: none;
-  color: rgb(183, 174, 228);
+  color: #ffffff;
   font-size: 1.1rem;
   font-weight: 600;
   text-shadow: 1px 1px 1px #000;
@@ -29,6 +29,7 @@ body {
 }
 .container__navbar a:hover {
   color: #ddd;
+  font-variant: small-caps;
 }
 .container__navbar a:active, .container__navbar a::selection {
   color: red;
@@ -36,7 +37,7 @@ body {
 .container__navbar a .container__image {
   border-radius: 50%;
   height: 5vh;
-  box-shadow: 0 0 0.9rem 2px;
+  filter: drop-shadow(0 0 0.2rem #fff);
 }
 .container__navbar a .container__image:hover {
   box-shadow: 0 0 0.5rem #ddd;
@@ -61,9 +62,8 @@ body {
   height: 40%;
   margin: 0 auto;
   border-radius: 8px;
-  box-shadow: 0 0 0.5rem;
-  background-color: rgb(17, 15, 27);
-  filter: drop-shadow(1px 1px 0.1rem #ddd);
+  background-image: linear-gradient(to bottom, #000 80%, rgb(58, 85, 84));
+  filter: drop-shadow(0px 0px 0.3rem #ddd);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -102,9 +102,8 @@ body {
 }
 .main .main__icons .main__right a {
   text-decoration: none;
-  border: 1px solid #ddd;
   border-radius: 50%;
-  box-shadow: 0 0 0.5rem #000;
+  background-image: linear-gradient(to bottom, #000 80%, rgb(58, 85, 84));
 }
 .main .main__icons .main__right a i {
   background-color: #ddd;
@@ -144,7 +143,7 @@ body {
 .main .main__search .main__left input {
   height: 2.4rem;
   width: 30vw;
-  background-color: #3d3c4a;
+  background-image: linear-gradient(to left, #000 40%, rgb(58, 85, 84));
   outline: none;
   padding-left: 0.5rem;
   border-radius: 4px;
@@ -161,7 +160,7 @@ body {
 }
 .main .main__search .main__left button {
   height: 2.4rem;
-  background-color: #3d3c4a;
+  background-image: linear-gradient(to left, #000 70%, rgb(58, 85, 84));
   padding: 0.5rem;
   border-radius: 4px;
   border: none;
@@ -192,17 +191,20 @@ body {
   font-size: 2.2rem;
   text-shadow: 0 0 2rem lightseagreen;
   filter: drop-shadow(1px 1px 1rem lightseagreen);
+  user-select: none;
+  animation: heart 2s linear 0s infinite;
 }
-.main .main__search .main__right h2::selection {
-  color: red;
-}
-.main .main__search .main__right h2 span {
-  color: red;
-  font-size: 2.5rem;
-  font-weight: 900;
-}
-.main .main__search .main__right h2 span::selection {
-  color: red;
+@keyframes heart {
+  from {
+    color: lightseagreenred;
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+  to {
+    color: red;
+    font-size: 2.4rem;
+    font-weight: 900;
+  }
 }
 .main .main__links {
   width: 90%;
@@ -217,9 +219,13 @@ body {
 }
 .main .main__links a div {
   padding: 1.5rem;
-  background-color: #3d3c4a;
+  background-image: linear-gradient(to left, #181717 70%, rgb(58, 85, 84));
   color: #ddd;
   box-shadow: 0 0 0.5rem #000;
+}
+.main .main__links a div:hover {
+  font-variant: small-caps;
+  letter-spacing: 0.3rem;
 }
 .main .main__links a div:hover {
   box-shadow: 0 0 0.5rem #ddd;
@@ -344,6 +350,7 @@ body {
   }
   .main .main__links a {
     text-decoration: none;
+    background-image: linear-gradient(to left, #181717 70%, rgb(58, 85, 84));
   }
   .main .main__links a div {
     padding: 1.5rem;
