@@ -6,14 +6,9 @@
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0.6);
-  background-image: url("https://images.unsplash.com/photo-1657127791613-5c65412614d3?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  object-fit: cover;
-  background-repeat: repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  width: 100%;
+  width: 100vw;
   height: auto;
+  background-color: red;
 }
 .container__navbar {
   height: 14vh;
@@ -66,11 +61,9 @@ body {
   width: 80%;
   height: 40%;
   margin: 0 auto;
-  border-radius: 14px;
-  background-color: rgba(138, 138, 138, 0.4);
-  backdrop-filter: blur(4px);
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  filter: drop-shadow(0 0 2px rgba(135, 135, 135, 0.6));
+  border-radius: 8px;
+  background-image: linear-gradient(to bottom, #000 80%, rgb(58, 85, 84));
+  filter: drop-shadow(0px 0px 0.3rem #ddd);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -110,16 +103,17 @@ body {
 .main .main__icons .main__right a {
   text-decoration: none;
   border-radius: 50%;
+  background-image: linear-gradient(to bottom, #000 80%, rgb(58, 85, 84));
 }
 .main .main__icons .main__right a i {
-  background-color: rgba(225, 225, 225, 0.8);
+  background-color: #ddd;
   padding: 0.5em;
   border-radius: 50%;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  filter: saturate(130%), brightness(120%) contrast(130%);
 }
 .main .main__icons .main__right a:hover {
-  filter: drop-shadow(0 0 1rem rgba(225, 225, 225, 0.4));
-  background-color: rgba(225, 225, 225, 0.4);
+  box-shadow: 0 0 0.5rem #ddd;
 }
 .main .main__icons .main__right a .fa-github,
 .main .main__icons .main__right a .fa-codepen {
@@ -149,32 +143,29 @@ body {
 .main .main__search .main__left input {
   height: 2.4rem;
   width: 30vw;
-  background-color: rgba(135, 135, 135, 0.4);
-  backdrop-filter: blur(4px);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-image: linear-gradient(to left, #000 40%, rgb(58, 85, 84));
   outline: none;
   padding-left: 0.5rem;
   border-radius: 4px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: none;
   color: #ddd;
   font-size: 1.2rem;
-  box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0.1rem;
 }
 .main .main__search .main__left input::placeholder {
   color: #ddd;
 }
 .main .main__search .main__left input:hover {
-  box-shadow: 0 0 0.5rem rgba(135, 135, 135, 0.4);
+  box-shadow: 0 0 0.5rem #ddd;
 }
 .main .main__search .main__left button {
   height: 2.4rem;
-  background-color: rgba(135, 135, 135, 0.4);
-  backdrop-filter: blur(4px);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-image: linear-gradient(to left, #000 70%, rgb(58, 85, 84));
   padding: 0.5rem;
   border-radius: 4px;
+  border: none;
   margin-left: auto;
-  box-shadow: 0 0 rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0.1rem;
 }
 .main .main__search .main__left button i {
   color: #ddd;
@@ -182,7 +173,7 @@ body {
   text-shadow: 0 0 0.1rem;
 }
 .main .main__search .main__left button:hover {
-  box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0.5rem #ddd;
 }
 .main .main__search .main__right {
   height: 100%;
@@ -221,17 +212,15 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  gap: 6px;
+  gap: 4px;
 }
 .main .main__links a {
   text-decoration: none;
 }
 .main .main__links a div {
   padding: 1.5rem;
-  background-color: rgba(135, 135, 135, 0.4);
-  backdrop-filter: blur(4px);
+  background-image: linear-gradient(to left, #181717 70%, rgb(58, 85, 84));
   color: #ddd;
-  border-radius: 12px;
   box-shadow: 0 0 0.5rem #000;
 }
 .main .main__links a div:hover {
@@ -328,7 +317,7 @@ body {
   }
   .main .main__search .main__left input {
     height: 2.9rem;
-    width: auto;
+    width: 50vw;
   }
   .main .main__search .main__left .btn-microphone {
     display: none;
@@ -347,7 +336,6 @@ body {
   }
   .main .main__search .main__right h2 {
     font-size: 1.6rem;
-    display: none;
   }
   .main .main__search .main__right h2 span {
     display: none;
@@ -358,13 +346,14 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
+    gap: 2px;
   }
   .main .main__links a {
     text-decoration: none;
+    background-image: linear-gradient(to left, #181717 70%, rgb(58, 85, 84));
   }
   .main .main__links a div {
-    padding: 1.2rem;
-    border-radius: 12px;
+    padding: 1.5rem;
   }
   .main .main__links a div i {
     font-size: 2rem;
@@ -376,4 +365,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.map */
