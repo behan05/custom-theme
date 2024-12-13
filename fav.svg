@@ -1,0 +1,32 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="200"
+    height="200"
+    viewBox="0 0 200 200"
+    fill="none"
+>
+    <!-- Outer Circle -->
+    <circle cx="100" cy="100" r="90" stroke="#4A90E2" stroke-width="8" />
+
+    <!-- Inner Design -->
+    <path
+        d="M100 40 L130 160 L70 160 Z"
+        fill="#4A90E2"
+        stroke="#FFFFFF"
+        stroke-width="5"
+    />
+
+    <!-- Text -->
+    <text
+        x="100"
+        y="105"
+        fill="#FFFFFF"
+        font-size="20"
+        font-family="Arial, sans-serif"
+        font-weight="bold"
+        text-anchor="middle"
+        alignment-baseline="middle"
+    >
+        Browser
+    </text>
+</svg>

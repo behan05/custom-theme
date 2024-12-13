@@ -1,0 +1,15 @@
+{
+  "name": "custom-theme",
+  "version": "1.0.0",
+  "description": "This repository contains a custom theme designed for web browsers, specifically tailored for personalization and a unique browsing experience.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.83.0"
+  }
+}

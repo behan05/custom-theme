@@ -7,13 +7,14 @@
 
 body {
   background-color: rgba(0, 0, 0, 0.6);
-  background-image: url("https://images.unsplash.com/photo-1657127791613-5c65412614d3?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   object-fit: cover;
   background-repeat: repeat;
   background-size: cover;
   background-position: 50% 50%;
   width: 100%;
   height: auto;
+  user-select: none;
+  background: linear-gradient(to right, #360033, #0b8793);
 }
 .container__navbar {
   height: 14vh;
@@ -26,7 +27,7 @@ body {
 }
 .container__navbar a {
   text-decoration: none;
-  color: #ffffff;
+  color: #ccc;
   font-size: 1.1rem;
   font-weight: 600;
   text-shadow: 1px 1px 1px #000;
@@ -67,10 +68,10 @@ body {
   height: 40%;
   margin: 0 auto;
   border-radius: 14px;
-  background-color: rgba(138, 138, 138, 0.4);
+  background-color: rgba(138, 138, 138, 0.1);
   backdrop-filter: blur(4px);
-  border: 2px solid rgba(255, 255, 255, 0.4);
   filter: drop-shadow(0 0 2px rgba(135, 135, 135, 0.6));
+  background: linear-gradient(to left, #360033, #0b8793);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -147,18 +148,14 @@ body {
   display: flex;
 }
 .main .main__search .main__left input {
-  height: 2.4rem;
-  width: 30vw;
-  background-color: rgba(135, 135, 135, 0.4);
-  backdrop-filter: blur(4px);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 3rem;
+  background-color: transparent;
+  border: none;
   outline: none;
-  padding-left: 0.5rem;
   border-radius: 4px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
   color: #ddd;
   font-size: 1.2rem;
-  box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0.2rem #ccc;
 }
 .main .main__search .main__left input::placeholder {
   color: #ddd;
@@ -167,14 +164,11 @@ body {
   box-shadow: 0 0 0.5rem rgba(135, 135, 135, 0.4);
 }
 .main .main__search .main__left button {
-  height: 2.4rem;
-  background-color: rgba(135, 135, 135, 0.4);
-  backdrop-filter: blur(4px);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  padding: 0.5rem;
+  padding: 1rem;
+  background-color: transparent;
   border-radius: 4px;
-  margin-left: auto;
-  box-shadow: 0 0 rgba(255, 255, 255, 0.2);
+  border: none;
+  box-shadow: 0 0 0.2rem #ccc;
 }
 .main .main__search .main__left button i {
   color: #ddd;
@@ -227,12 +221,11 @@ body {
   text-decoration: none;
 }
 .main .main__links a div {
-  padding: 1.5rem;
-  background-color: rgba(135, 135, 135, 0.4);
-  backdrop-filter: blur(4px);
+  padding: 1.2rem;
+  background-color: transparent;
   color: #ddd;
   border-radius: 12px;
-  box-shadow: 0 0 0.5rem #000;
+  box-shadow: 0 0 0.2rem #ccc;
 }
 .main .main__links a div:hover {
   font-variant: small-caps;
