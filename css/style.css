@@ -142,7 +142,7 @@ body {
   flex-wrap: wrap;
 }
 .main .main__search .main__left {
-  height: 100%;
+  height: auto;
   width: 60%;
   padding: 2.5rem;
   display: flex;
@@ -188,14 +188,14 @@ body {
 }
 .main .main__search .main__right h2 {
   font-family: "Gwendolyn", cursive;
-  font-weight: 700;
+  font-weight: 100;
   font-style: normal;
   color: #fff;
   font-size: 2.2rem;
   text-shadow: 0 0 2rem lightseagreen;
   filter: drop-shadow(1px 1px 1rem lightseagreen);
   user-select: none;
-  animation: heart 2s linear 0s infinite;
+  animation: heart 2s linear 0s 2;
 }
 @keyframes heart {
   from {
@@ -225,14 +225,14 @@ body {
   background-color: transparent;
   color: #ddd;
   border-radius: 12px;
-  box-shadow: 0 0 0.2rem #ccc;
+  box-shadow: inset 0 0 0.2rem #ccc;
 }
 .main .main__links a div:hover {
   font-variant: small-caps;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
 }
 .main .main__links a div:hover {
-  box-shadow: 0 0 0.5rem #ddd;
+  box-shadow: 0 0 0.2rem #190017;
 }
 .main .main__links a div::selection {
   color: red;
@@ -253,23 +253,21 @@ body {
   color: #216e91;
 }
 
-@media screen and (min-width: 1px) and (max-width: 450px) {
-  .container__navbar {
-    height: 10vh;
-  }
+@media screen and (min-width: 1px) and (max-width: 800px) {
   .container__navbar a {
     letter-spacing: 0px;
   }
   .container__navbar a .container__image {
-    height: 4vh;
+    height: 5vh;
   }
   .main {
     width: 100%;
-    height: 86vh;
+    max-height: 86vh;
   }
   .main .main__icons {
     width: 90%;
-    height: 30%;
+    height: auto;
+    padding: 1rem 0;
   }
   .main .main__icons .main__left {
     display: flex;
@@ -280,18 +278,21 @@ body {
     width: 50%;
   }
   .main .main__icons .main__left img {
-    height: 70%;
+    max-height: 100%;
+    max-width: 100%;
   }
   .main .main__icons .main__right {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
     width: auto;
     column-gap: 1rem;
+    padding: 20px;
   }
   .main .main__icons .main__right a {
     border: none;
     box-shadow: none;
+    margin: 4px;
   }
   .main .main__icons .main__right a i {
     box-shadow: 0 0 0.5rem #000;
@@ -308,8 +309,8 @@ body {
     flex-wrap: nowrap;
   }
   .main .main__search .main__left {
-    height: 70%;
-    width: 65%;
+    height: auto;
+    width: auto;
     padding: 1.2rem;
   }
   .main .main__search .main__left form {
@@ -320,19 +321,11 @@ body {
     flex-wrap: nowrap;
   }
   .main .main__search .main__left input {
-    height: 2.9rem;
-    width: auto;
-  }
-  .main .main__search .main__left .btn-microphone {
-    display: none;
-  }
-  .main .main__search .main__left button {
-    height: 2.9rem;
-    margin-left: 4px;
+    width: 100%;
   }
   .main .main__search .main__right {
-    height: 100%;
-    width: 40%;
+    height: auto;
+    width: auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
